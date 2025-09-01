@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz de Aventuras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Quiz de Aventuras: Brasil ou Estados Unidos?</h1>
+        <p>Escolha seu destino e descubra qual aventura te espera!</p>
+    </header>
+
+    <section id="quiz-section">
+        <h2>Onde você quer viver sua próxima aventura?</h2>
+
+        <!-- Escolha de país -->
+        <div id="country-choice">
+            <button class="country-btn" onclick="chooseCountry('brasil')">Brasil</button>
+            <button class="country-btn" onclick="chooseCountry('eua')">Estados Unidos</button>
+        </div>
+
+        <!-- Questões de aventura no Brasil -->
+        <div id="brazil-adventure" class="hidden">
+            <h3>Agora, escolha sua aventura no Brasil:</h3>
+            <form id="brazil-quiz-form">
+                <div class="question">
+                    <label for="brazil1">1. Onde você gostaria de explorar a selva?</label><br>
+                    <input type="radio" name="brazil1" value="a"> Amazônia<br>
+                    <input type="radio" name="brazil1" value="b"> Pantanal<br>
+                    <input type="radio" name="brazil1" value="c"> Chapada Diamantina<br>
+                </div>
+                <div class="question">
+                    <label for="brazil2">2. Qual praia você prefere visitar?</label><br>
+                    <input type="radio" name="brazil2" value="a"> Copacabana, Rio de Janeiro<br>
+                    <input type="radio" name="brazil2" value="b"> Jericoacoara, Ceará<br>
+                    <input type="radio" name="brazil2" value="c"> Ilha de Marajó, Pará<br>
+                </div>
+                <button type="button" onclick="submitBrazilQuiz()">Enviar Respostas</button>
+            </form>
+        </div>
+
+        <!-- Resultado de aventura no Brasil -->
+        <div id="brazil-result" class="hidden">
+            <h3>Resultado:</h3>
+            <p id="brazil-result-text"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Feito com ❤ por [Seu Nome]</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
